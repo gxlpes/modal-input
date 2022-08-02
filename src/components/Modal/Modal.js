@@ -1,11 +1,15 @@
 import { StyledModal } from "./ModalStyles";
 import { BackdropStyled } from "../../UI/BackdropStyles";
 import { Button } from "../Button/ButtonStyles";
+import ReactDOM from "react-dom";
 
 const Modal = (props) => {
   return (
     <>
-      <BackdropStyled onClick={props.onConfirm} />
+      {ReactDOM.createPortal(
+        <BackdropStyled onClick={props.onConfirm} />,
+        document.getElementById("backdrop-root")
+      )}
       <StyledModal>
         <header>
           <h3>User Input Modal</h3>
