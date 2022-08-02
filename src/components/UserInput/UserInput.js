@@ -11,13 +11,18 @@ const UserInput = (props) => {
   const addUserInputHandler = (event) => {
     event.preventDefault();
     const userInputEntered = userInputRef.current.value;
-    setClickedInput(userInputEntered);
 
+    if (userInputEntered.trim().length === 0) {
+      return;
+    }
+
+    setClickedInput(userInputEntered);
     props.onUserInput(userInputEntered);
   };
 
   const modalHandler = () => {
     setClickedInput(null);
+    userInputRef.current.value = " ";
   };
 
   return (
