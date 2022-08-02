@@ -1,11 +1,9 @@
-import Modal from "./components/Modal";
-import UserInput from "./components/UserInput";
+import UserInput from "./components/UserInput/UserInput";
 
 function App() {
   return (
     <>
       <UserInput />
-      <Modal />
     </>
   );
 }
