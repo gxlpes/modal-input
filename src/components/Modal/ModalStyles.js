@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const StyledModal = styled.div`
-  background-color: purple;
+  background-color: lightgrey;
   position: fixed;
-  top: 30vh;
-  left: 10%;
-  width: 80%;
+  margin: auto;
+  width: 25rem;
   z-index: 100;
   overflow: hidden;
+  padding: 1rem;
 `;

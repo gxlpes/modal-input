@@ -1,9 +1,13 @@
 import UserInput from "./components/UserInput/UserInput";
+import { Wrapper, GlobalStyle } from "./UI/Wrapper";
 
 function App() {
   return (
     <>
-      <UserInput />
+      <GlobalStyle />
+      <Wrapper>
+        <UserInput />
+      </Wrapper>
     </>
   );
 }

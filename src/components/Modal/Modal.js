@@ -1,16 +1,18 @@
 import { StyledModal } from "./ModalStyles";
-import { BackdropStyled } from "./BackdropStyles";
+import { BackdropStyled } from "../../UI/BackdropStyles";
+import { Button } from "../Button/ButtonStyles";
 
 const Modal = (props) => {
   return (
     <>
-      <BackdropStyled />
+      <BackdropStyled onClick={props.onConfirm} />
       <StyledModal>
         <header>
           <h3>This is a modal</h3>
         </header>
-        <p>This is the text that was send:</p>
-        <p>{props.content}</p>
+        <p>The text below was sent to the modal.</p>
+        <p>"{props.content}"</p>
+        <Button onClick={props.onConfirm}>Dismiss</Button>
       </StyledModal>
     </>
   );
